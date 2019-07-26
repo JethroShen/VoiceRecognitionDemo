@@ -1,0 +1,47 @@
+server:
+  port: 9118
+
+# JDBC 配置(驱动类自动从url的mysql识别,数据源类型自动识别)
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB  # 单个文件大小
+      max-request-size: 100MB  # 设置总上传的数据大小
+      enabled: true #开启
+
+# swagger开关
+swagger:
+  enabled:  true
+  info:
+    basePackage:  com.jethro.controller
+    title: 发布控制服务
+    desc: 发布控制服务
+    termsOfServiceUrl: http://127.0.0.1:${server.port}/
+    version: 1.0
+    contact:
+        name: 发布控制服务
+        url: http://127.0.0.1:${server.port}/swagger-ui.html
+        email:
+
+
+ai:
+#科大讯飞语音参数
+  URL: http://openapi.xfyun.cn/v2/aiui
+  APPID: 5be91bd9
+  API_KEY: 70b8e2267f5c4b74b2a5105e00d196bb
+  DATA_TYPE: audio
+  SCENE: main
+  SAMPLE_RATE: 16000
+  AUTH_ID: 2ff181c8bc23f373ca155d332ece22e9
+  AUE: raw
+  FILE_PATH: C:/a/2.wav
+  PERS_PARAM: {\\\"auth_id\\\":\\\"2894c985bf8b1111c6728db79d3479ae\\\"}
+  #ffmpeg存放位置
+  webroot: C:\develop\ffmpeg\bin
+
+
+
+
+
+
+
